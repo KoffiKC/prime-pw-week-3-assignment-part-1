@@ -13,7 +13,7 @@ let favNoms = ['Ramen', 'Pizza', 'burritos', 'carrots']
 // 1.b. TODO: Log your array of foods to the console with a message, similar
 //      to the example above
 
-console.log(favNoms);
+console.log('All the Noms:', favNoms);
 
 // 2. Array.length - tells you how many items are in the array
 console.log('--- 2. Length of an array ---');
@@ -28,17 +28,16 @@ console.log('The number of foods in my heart are', favNoms.length);
 console.log('--- 3. Accessing items in an array ---');
 
 // Example: Log the first animal from the array using it's array index
-console.log('First animal is', animalArray[0])
+console.log('First animal is a', animalArray[0])
 
 // 3.a. TODO: Log the second animal in the array
-console.log(animalArray[1]);
+console.log('The second animal is a', animalArray[1]);
 
 // 3.b. TODO: Log the last animal in the array using it's array index
-console.log(animalArray[1]);
-
+console.log('The last animal is a', animalArray[3]);
 // 3.c. (STRETCH) TODO: Log the last animal by using the array length,
 //      instead of the exact index number of the last item
-console.log(animalArray[animalArray.length - 1]);
+console.log('The last animal is still a', animalArray[animalArray.length - 1]);
 
 
 // 4. Adding & Removing Array Items
@@ -49,8 +48,8 @@ animalArray.push('penguin');
 console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Add a new food at the end of your array & log the array
-
-
+favNoms.push('Popcorn');
+console.log(favNoms);
 
 // Example: Remove the last animal by using Array.pop
 let removedAnimal = animalArray.pop();
@@ -59,14 +58,17 @@ console.log('The animals are now', animalArray);
 
 // 4.b. TODO: Remove the food at the end of your array &
 //      log both the food removed and the updated array
-
+let forgottenNom = favNoms.pop();
+console.log('The Nom who will be going home is...', forgottenNom);
+console.log(favNoms, 'are all that remain in the Pantry wars');
 
 // Example: Add an animal to the beginning using Array.unshift
 animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.c. TODO: Add a food at the beginning of the array & log the array
-
+favNoms.unshift('Golden raisins');
+console.log(`New food to the front of the line! ${favNoms}`);
 
 // Example: Remove the first animal using Array.shift
 removedAnimal = animalArray.shift();
@@ -75,3 +77,6 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array &
 //     log both the food removed and the updated array
+forgottenNom = favNoms.shift();
+console.log(forgottenNom, 'wasnt elimnated, I just ate them all...');
+console.log(`Dont worry though ${favNoms}, I'm full now`);
